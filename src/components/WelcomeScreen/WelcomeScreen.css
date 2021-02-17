@@ -1,0 +1,82 @@
+.welcomeScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+}
+
+.loadingOnDropArea {
+  color: white;
+}
+
+.instructions {
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  margin-left: 10pt;
+  margin-right: 10pt;
+}
+
+.dropArea {
+  width: 500px;
+  height: 300px;
+  border: dashed 3px;
+  border-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-direction: column;
+}
+
+.dropAreaOnDragOver {
+  width: 500px;
+  height: 300px;
+  border: dashed 3px;
+  border-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343842;
+  flex-direction: column;
+}
+
+.dropAreaText {
+  color: white;
+  font-weight: 500;
+  margin: 12px;
+}
+
+.dropAreaTextMobile {
+  display: none;
+}
+
+.inputFile {
+  color: white;
+  margin-left: 10%;
+}
+
+@media all and (max-width: 480px) { 
+
+  .instructions {
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+
+  .dropArea {
+    width: 90%;
+    height: 200pt;
+  }
+
+  .dropAreaText {
+    display: none;
+  }
+
+  .dropAreaTextMobile {
+    display: block;
+    color: white;
+    font-weight: 500;
+    margin: 12px;
+  }
+
+}

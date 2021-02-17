@@ -1,0 +1,134 @@
+.roomSetup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -100px;
+}
+
+.roomSetupTitle {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.rule {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.ruleText {
+  color: white;
+  font-weight: 500;
+  max-width: 80%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.pswInput {
+  height: 34px;
+  outline: none;
+  border: none;
+  border-radius: 17px;
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+.doneButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(16, 212, 212);
+  font-weight: 600;
+  width: 70pt;
+  height: 32pt;
+  transition: 500ms;
+  margin-top: 10px;
+}
+
+.doneButton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 500ms;
+}
+
+.disclaimer {
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media all and (max-width: 480px) { 
+
+  .pswInput{
+    width: 50%;
+  }
+
+  .disclaimer {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+}
